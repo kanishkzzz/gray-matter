@@ -1,0 +1,9 @@
+key,title,status,assignee,component,updated,note
+PAY-141,Retire legacy settlement batch job,To Do,r.okonjo,Payment Service,2026-09-17,Blocked on DEC-006 sign-off
+PAY-142,Archive settlement table before decommission,To Do,s.mistry,Database Architecture,2026-09-18,Blocked on Legal review of retention scope
+PAY-143,Add replication lag guard to migration runbook,To Do,l.haverford,Database Migration,2026-09-16,Follow-up from INC-2026-0814
+OPS-078,Extend transaction monitoring to settlement table,To Do,l.haverford,Transaction Monitoring,2026-09-19,Scope this sprint per Q4 planning
+OPS-079,Alerting rule change after batch retirement,To Do,,Transaction Monitoring,2026-09-17,Depends on PAY-141
+AUTH-211,Add refresh jitter to client libraries,To Do,p.adeyemi,Authentication Service,2026-09-19,Recommended by token lifetime review
+AUTH-212,Confirm whether 15 minute token lifetime is a compliance requirement,To Do,p.adeyemi,Authentication Service,2026-09-05,Open question blocking option analysis
+PAY-118,Dual-write payment ledger during migration,In Progress,r.okonjo,Database Migration,2026-09-15,Lag tolerance raised to 600s as interim measure

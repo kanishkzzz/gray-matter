@@ -1,0 +1,5 @@
+# Streamlit operator console. Talks to the API over HTTP; it does not import
+# the app package, so it can run against a backend on another host.
+-r requirements.txt
+streamlit>=1.40
+requests>=2.32

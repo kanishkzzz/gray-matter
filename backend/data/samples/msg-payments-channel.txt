@@ -1,0 +1,31 @@
+#payments — 2026-09-15 to 2026-09-19
+
+[09-15 09:42] r.okonjo: replica lag is back over 400s this morning. anyone
+  looking at it?
+[09-15 09:44] l.haverford: that's the batch again. it's reading from the mysql
+  replica and the read is what's pushing the lag up
+[09-15 09:47] r.okonjo: so the thing we're trying to decommission is the reason
+  we can't decommission it
+[09-15 09:51] l.haverford: pretty much. PAY-133 is blocked on the batch, the
+  batch is blocked on someone deciding DEC-006
+[09-15 10:02] s.mistry: finance doesn't need the batch output, said this in the
+  review. we read from the event log
+[09-15 10:15] p.adeyemi: worth saying out loud — the database migration plan
+  never wrote down that the batch has to go first. that's how we got INC-2026-0814
+
+[09-17 14:20] r.okonjo: settlement batch review done. recommending deprecation.
+  DEC-006 stays proposed until the payments lead signs off
+[09-17 14:22] l.haverford: 🎉
+[09-17 14:25] s.mistry: does that change the retention position at all? we hold
+  transaction records seven years under DEC-003 and some of that was populated
+  by the batch
+[09-17 14:31] r.okonjo: the records are in the event log, the batch only wrote
+  the settlement table. retention is unaffected. worth confirming with legal
+  though, i don't want to be the person who assumed that
+
+[09-19 08:05] p.adeyemi: auth token lifetime doc is up for comment. tl;dr
+  proposing jitter, not a lifetime change
+[09-19 08:09] l.haverford: agree. changing DEC-002 because payments has too
+  many workers is the wrong direction
+[09-19 08:14] r.okonjo: the payment service worker count is itself a bit silly.
+  separate problem

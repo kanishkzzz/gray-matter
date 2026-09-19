@@ -1,0 +1,26 @@
+# Gray Matter backend
+#
+#   python -m venv .venv
+#   .venv\Scripts\activate          (Windows)   |   source .venv/bin/activate
+#   pip install -r requirements.txt
+#
+# The API layer alone is enough to serve the full frontend contract against
+# the seeded graph. Cognee and the console are optional extras below.
+
+# -- API --------------------------------------------------------------------
+fastapi>=0.115,<1.0
+uvicorn[standard]>=0.32,<1.0
+pydantic>=2.9,<3.0
+python-dotenv>=1.0,<2.0
+
+# -- Ingestion --------------------------------------------------------------
+python-multipart>=0.0.9
+pandas>=2.2
+openpyxl>=3.1
+
+# -- Operator console (optional: pip install -r requirements-console.txt) ----
+# streamlit>=1.40
+# requests>=2.32
+
+# -- Knowledge engine (optional, large: see requirements-cognee.txt) ---------
+# cognee>=0.1.20

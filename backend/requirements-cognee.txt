@@ -1,0 +1,7 @@
+# Cognee knowledge engine.
+#
+# Kept separate because it is a large dependency tree and, on first run,
+# downloads the fastembed model. The backend runs without it: retrieval falls
+# back to the deterministic graph search and answers are composed extractively.
+-r requirements.txt
+cognee>=0.1.20

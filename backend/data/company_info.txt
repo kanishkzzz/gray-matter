@@ -1,0 +1,47 @@
+NovaPay - Company Handbook Extract
+
+LEAVE AND TIME OFF
+
+Employees receive 20 days of paid leave per calendar year, accrued monthly.
+Unused leave carries over to a maximum of 5 days into the following year.
+Sick leave is separate and is not capped, but absences beyond three
+consecutive days require a medical note.
+
+REMOTE WORK
+
+The standard arrangement is two days remote per week. Engineering teams may
+agree a different split with their manager provided core hours of 11:00-16:00
+are covered. Fully remote arrangements require director approval.
+
+DEPARTMENTS
+
+Engineering, HR and Finance. Engineering is divided into Platform, Payments
+and Reliability.
+
+PAYMENTS PLATFORM
+
+The Payment Service is the system of record for transactions. It was rebuilt
+around an append-only event log in 2026 so that settlement and monitoring
+could be added without further changes to the write path.
+
+The service persists transactions to PostgreSQL 16 following DEC-004. The
+previous MySQL 8.0 cluster is being decommissioned under PAY-133, with
+dual-write in place during the migration window.
+
+AUTHENTICATION
+
+Service-to-service calls use OAuth 2.1 client credentials. Token lifetime is
+15 minutes. The previous model, static credentials issued from the platform
+vault, was retired under DEC-002.
+
+DATA RETENTION
+
+Transaction records are retained for seven years from the date of settlement
+to satisfy financial reporting obligations. Deletion before that period
+requires written finance approval.
+
+MONITORING
+
+Real-time transaction monitoring covers failed, delayed and duplicate
+transactions. Alerting thresholds are defined in the Transaction Monitoring
+Specification.

@@ -1,0 +1,44 @@
+[
+  {
+    "file": "mtg-settlement-batch-review.md",
+    "title": "Settlement Batch Review",
+    "source_type": "meeting",
+    "date": "2026-09-17"
+  },
+  {
+    "file": "mtg-q4-platform-planning.md",
+    "title": "Q4 Platform Planning",
+    "source_type": "meeting",
+    "date": "2026-09-19"
+  },
+  {
+    "file": "doc-incident-duplicate-settlements.md",
+    "title": "Incident Report: Duplicate Settlement Entries",
+    "source_type": "document",
+    "date": "2026-08-14"
+  },
+  {
+    "file": "doc-auth-token-lifetime-review.md",
+    "title": "Authentication Token Lifetime Review",
+    "source_type": "document",
+    "date": "2026-09-05"
+  },
+  {
+    "file": "doc-retention-scope-note.md",
+    "title": "Data Retention - Scope Note",
+    "source_type": "document",
+    "date": "2026-09-18"
+  },
+  {
+    "file": "msg-payments-channel.txt",
+    "title": "#payments - settlement batch and auth threads",
+    "source_type": "message",
+    "date": "2026-09-19"
+  },
+  {
+    "file": "tickets-backlog.csv",
+    "title": "Platform Backlog Extract",
+    "source_type": "ticket",
+    "date": "2026-09-19"
+  }
+]
